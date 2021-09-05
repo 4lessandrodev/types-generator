@@ -1,6 +1,6 @@
 import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate.ts';
 import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model.ts';
-import { IMapper } from 'types-ddd';
+import { IMapper, DomainId } from 'types-ddd';
 
 export const {{pascalCase name}}AggregateFactor = (model: {{pascalCase name}}Model): Result<{{pascalCase name}}Aggregate> => {
     // check value object results here before initialize aggregate
@@ -18,8 +18,12 @@ export const {{pascalCase name}}ModelFactor = (aggregate: {{pascalCase name}}Agg
 }
 
 export class {{pascalCase name}}Mapper implements IMapper<{{pascalCase name}}Aggregate, {{pascalCase name}}Model>{
-    toDomain: (model: {{pascalCase name}}Model) => {{pascalCase name}}AggregateFactor(model).getResult();
-    toPersistence: () => {{pascalCase name}}ModelFactor(aggregate);
+    toDomain(model: {{pascalCase name}}Model){
+      return {{pascalCase name}}AggregateFactor(model).getResult();
+    }
+    toPersistence(aggregate: {{pascalCase name}}Aggregate){
+        return {{pascalCase name}}ModelFactor(aggregate);
+    }
 }
 
 export default {{pascalCase name}}Mapper;

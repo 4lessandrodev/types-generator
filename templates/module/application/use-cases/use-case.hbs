@@ -4,7 +4,7 @@ import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{d
 import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate.ts';
 
 export class Create{{pascalCase name}}UseCase implements IUseCase<Create{{pascalCase name}}Dto, Result<void, string>>{
-    constructor(private readonly {{camelCase name}}Repo: I{{pascalCase name}}){}
+    constructor(private readonly {{camelCase name}}Repo: I{{pascalCase name}}Repo){}
 
     async execute(dto: Create{{pascalCase name}}Dto): Promise<Result<void, string>> {
         try {
