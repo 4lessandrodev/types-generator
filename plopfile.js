@@ -46,8 +46,8 @@ module.exports = function (plop) {
     ],
         actions: function(data) {
             var actions = [];
-
-            if(data.valueObject) {
+            const { option } = data;
+            if(option === 'valueObject') {
                 actions.push(
                     {
                         type: 'add',
@@ -60,7 +60,7 @@ module.exports = function (plop) {
                         templateFile: 'templates/module/domain/value-objects/tests/value-object.spec.hbs'
                     }
                 );
-            } else if (data.aggregate) {
+            } else if ( option === 'aggregate') {
                 actions.push(
                     {
                         type: 'add',
@@ -73,7 +73,7 @@ module.exports = function (plop) {
                         templateFile: 'templates/module/domain/aggregates/tests/aggregate.spec.hbs'
                     }
                 );
-            } else if (data.entity) {
+            } else if (option === 'entity') {
                 actions.push(
                     {
                         type: 'add',
@@ -86,7 +86,7 @@ module.exports = function (plop) {
                         templateFile: 'templates/module/domain/entities/tests/entity.spec.hbs'
                     }
                 );
-            } else if (data.useCase) {
+            } else if (option === 'useCase') {
                 actions.push(
                     {
                         type: 'add',
@@ -104,7 +104,7 @@ module.exports = function (plop) {
                         templateFile: 'templates/module/application/use-cases/tests/use-case.spec.hbs'
                     }
                 );
-            } else if (data.mapper) {
+            } else if (option === 'mapper') {
                 actions.push(
                     {
                         type: 'add',

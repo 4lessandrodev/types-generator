@@ -1,7 +1,7 @@
 import { IUseCase, Result, Logger, DomainId } from 'types-ddd';
-import Create{{pascalCase name}}Dto from './create-{{dashCase name}}.dto.ts';
-import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{dashCase name}}.repo.ts';
-import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate.ts';
+import Create{{pascalCase name}}Dto from './create-{{dashCase name}}.dto';
+import I{{pascalCase name}}Repo from '@modules/{{dashCase name}}/domain/repo/{{dashCase name}}.repo';
+import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
 
 export class Create{{pascalCase name}}UseCase implements IUseCase<Create{{pascalCase name}}Dto, Result<void, string>>{
     constructor(private readonly {{camelCase name}}Repo: I{{pascalCase name}}Repo){}
