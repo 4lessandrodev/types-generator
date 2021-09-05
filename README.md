@@ -2,7 +2,7 @@
 
 ## This lib generate types-ddd module and files
 
-Download the `types-generator` folder. Put it on you project root folder.
+Download the `generator` folder. Put it on you project root folder.
 
 Execute the command on your terminal on your project root.
 
