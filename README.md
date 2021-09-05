@@ -9,11 +9,11 @@ Execute the command on your terminal on your project root.
 ```shell
 
 wget https://github.com/4lessandrodev/types-generator/archive/refs/heads/main.zip && 
-unzip main.zip && mv ./types-generator-main/types-generator ./types-generator && rm -rf main.zip types-generator-main
+unzip main.zip && mv ./types-generator-main/generator ./generator && rm -rf main.zip types-generator-main
 
 ```
 
-You may download clicking [HERE](https://downgit.github.io/#/home?url=https:%2F%2Fgithub.com%2F4lessandrodev%2Ftypes-generator%2Ftree%2Fmain%2Ftypes-generator) or clone this repo.
+You may download clicking [HERE](https://downgit.github.io/#/home?url=https:%2F%2Fgithub.com%2F4lessandrodev%2Ftypes-generator%2Ftree%2Fmain%2Fgenerator) or clone this repo.
 
 ### Folder structure
 
@@ -55,7 +55,7 @@ Put the command below on you `package.json` scripts
 ```json
 
 "scripts":{
-    "generate": "yarn plop --plopfile ./types-generator/plopfile.js"
+    "generate": "yarn plop --plopfile ./generator/plopfile.js"
 }
 
 ```
@@ -109,6 +109,6 @@ main.ts / app.ts or index.ts
 
 `import 'module-alias/register';`
 
-You can use the repository as example 
+You can use the repository as example
 
-[Click To Example](https://github.com/4lessandrodev/simple-ddd-app-example)
+[Click To Example](https://github.com/4lessandrodev/nest-template)
