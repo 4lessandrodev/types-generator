@@ -183,6 +183,16 @@ module.exports = function (plop) {
                         type: 'add',
                         path: '../src/modules/{{dashCase name}}/infra/models/{{dashCase name}}.model.ts',
                         templateFile: './templates/infra/models/model.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: '../src/modules/{{dashCase name}}/infra/repo/{{dashCase name}}.repo.ts',
+                        templateFile: './templates/infra/repo/repo.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: '../src/modules/{{dashCase name}}/infra/repo/tests/{{dashCase name}}.repo.spec.ts',
+                        templateFile: './templates/infra/repo/tests/repo.spec.hbs'
                     }
                 );
             }

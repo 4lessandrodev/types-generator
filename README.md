@@ -28,6 +28,7 @@ You may download clicking [HERE](https://downgit.github.io/#/home?url=https:%2F%
                   │     ├── aggregates
                   │     ├── events
                   │     ├── subscriptions
+                  │     ├── repo
                   │     └── services
                   │ 
                   ├── application
@@ -35,6 +36,7 @@ You may download clicking [HERE](https://downgit.github.io/#/home?url=https:%2F%
                   │ 
                   └── infra
                         ├── models     
+                        ├── repo
                         └── mappers 
 
 ```
