@@ -19,7 +19,7 @@ module.exports = function (plop) {
                 {
                     type: 'confirm',
                     name: 'valueObject',
-                    message: 'Do you want Aggregate?'
+                    message: 'Do you want valueObject?'
                 },
                 {
                     type: 'confirm',
