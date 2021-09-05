@@ -4,6 +4,15 @@
 
 Download the `types-generator` folder. Put it on you project root folder.
 
+Execute the command on your terminal on your project root.
+
+```shell
+
+wget https://github.com/4lessandrodev/types-generator/archive/refs/heads/main.zip && 
+unzip main.zip && mv ./types-generator-main/types-generator ./types-generator && rm -rf main.zip types-generator-main
+
+```
+
 You may download clicking [HERE](https://downgit.github.io/#/home?url=https:%2F%2Fgithub.com%2F4lessandrodev%2Ftypes-generator%2Ftree%2Fmain%2Ftypes-generator) or clone this repo.
 
 ### Folder structure
