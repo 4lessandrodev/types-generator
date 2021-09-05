@@ -48,35 +48,75 @@ module.exports = function (plop) {
             var actions = [];
 
             if(data.valueObject) {
-                actions.push({
-                    type: 'add',
-                    path: 'folder/{{dashCase name}}.txt',
-                    templateFile: 'templates/value-object.txt'
-                });
+                actions.push(
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/domain/value-objects/{{dashCase name}}.value-object.ts',
+                        templateFile: 'templates/module/domain/value-objects/value-object.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/domain/value-objects/tests/{{dashCase name}}.value-object.spec.ts',
+                        templateFile: 'templates/module/domain/value-objects/tests/value-object.spec.hbs'
+                    }
+                );
             } else if (data.aggregate) {
-                actions.push({
-                    type: 'add',
-                    path: 'folder/{{dashCase name}}.txt',
-                    templateFile: 'templates/aggregate.txt'
-                });
+                actions.push(
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate.ts',
+                        templateFile: 'templates/module/domain/aggregates/aggregate.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/domain/aggregates/tests/{{dashCase name}}.aggregate.spec.ts',
+                        templateFile: 'templates/module/domain/aggregates/tests/aggregate.spec.hbs'
+                    }
+                );
             } else if (data.entity) {
-                actions.push({
-                    type: 'add',
-                    path: 'folder/{{dashCase name}}.txt',
-                    templateFile: 'templates/entity.txt'
-                });
+                actions.push(
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/domain/entities/{{dashCase name}}.entity.ts',
+                        templateFile: 'templates/module/domain/entities/entity.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/domain/entities/tests/{{dashCase name}}.entity.spec.ts',
+                        templateFile: 'templates/module/domain/entities/tests/entity.spec.hbs'
+                    }
+                );
             } else if (data.useCase) {
-                actions.push({
-                    type: 'add',
-                    path: 'folder/{{dashCase name}}.txt',
-                    templateFile: 'templates/use-case.txt'
-                });
+                actions.push(
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.dto.ts',
+                        templateFile: 'templates/module/application/use-cases/dto.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/application/use-cases/create-{{dashCase name}}.use-case.ts',
+                        templateFile: 'templates/module/application/use-cases/use-case.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/application/use-cases/tests/create-{{dashCase name}}.use-case.spec.ts',
+                        templateFile: 'templates/module/application/use-cases/tests/use-case.spec.hbs'
+                    }
+                );
             } else if (data.mapper) {
-                actions.push({
-                    type: 'add',
-                    path: 'folder/{{dashCase name}}.txt',
-                    templateFile: 'templates/mapper.txt'
-                });
+                actions.push(
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/infra/mappers/tests/{{dashCase name}}.mapper.spec.ts',
+                        templateFile: 'templates/module/infra/mappers/tests/mapper.spec.hbs'
+                    },
+                    {
+                        type: 'add',
+                        path: 'src/{{dashCase name}}/infra/mappers/{{dashCase name}}.mapper.ts',
+                        templateFile: 'templates/module/infra/mappers/mapper.hbs'
+                    }
+                );
             } else {
                 actions.push(
                     {
