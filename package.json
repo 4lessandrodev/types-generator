@@ -1,0 +1,12 @@
+{
+  "name": "plop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "plop": "^2.7.4"
+  },
+  "scripts":{
+    "generate": "yarn plop --plopfile ./plopfile.js"
+  }
+}
