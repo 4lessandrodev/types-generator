@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "plop": "^2.7.4"
+    "plop": "^2.7.4",
+    "rimraf": "^3.0.2"
   },
-  "scripts":{
-    "generate": "yarn plop --plopfile ./plopfile.js"
+  "scripts": {
+    "pregenerate": "rimraf src",
+    "generate": "yarn plop --plopfile ./types-generator/plopfile.js"
   }
 }

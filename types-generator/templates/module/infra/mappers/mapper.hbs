@@ -1,6 +1,6 @@
 import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggregates/{{dashCase name}}.aggregate';
 import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
-import { IMapper, DomainId } from 'types-ddd';
+import { IMapper, DomainId, Result } from 'types-ddd';
 
 export const {{pascalCase name}}AggregateFactor = (model: {{pascalCase name}}Model): Result<{{pascalCase name}}Aggregate> => {
     // check value object results here before initialize aggregate
