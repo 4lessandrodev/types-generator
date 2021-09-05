@@ -6,6 +6,39 @@ Download the `types-generator` folder. Put it on you project root folder.
 
 You may download clicking [HERE](https://downgit.github.io/#/home?url=https:%2F%2Fgithub.com%2F4lessandrodev%2Ftypes-generator%2Ftree%2Fmain%2Ftypes-generator) or clone this repo.
 
+### Folder structure
+
+```shell
+  $ tree
+  .
+  ├── package.json
+  ├── README.md
+  └── src
+       ├── config
+       │    ├── main.ts    
+       │    └── env.ts 
+       │
+       └── modules
+            │ 
+            └── [module-name]
+                  │ 
+                  │── domain
+                  │     ├── value-objects
+                  │     ├── entities
+                  │     ├── aggregates
+                  │     ├── events
+                  │     ├── subscriptions
+                  │     └── services
+                  │ 
+                  ├── application
+                  │     └── use-cases 
+                  │ 
+                  └── infra
+                        ├── models     
+                        └── mappers 
+
+```
+
 Put the command below on you `package.json` scripts
 
 ```json

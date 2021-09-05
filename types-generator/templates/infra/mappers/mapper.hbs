@@ -2,7 +2,7 @@ import {{pascalCase name}}Aggregate from '@modules/{{dashCase name}}/domain/aggr
 import {{pascalCase name}}Model from '@modules/{{dashCase name}}/infra/models/{{dashCase name}}.model';
 import { IMapper, DomainId, Result } from 'types-ddd';
 
-export const {{pascalCase name}}AggregateFactor = (model: {{pascalCase name}}Model): Result<{{pascalCase name}}Aggregate> => {
+export const {{pascalCase name}}AggregateFactory = (model: {{pascalCase name}}Model): Result<{{pascalCase name}}Aggregate> => {
     // check value object results here before initialize aggregate
     return {{pascalCase name}}Aggregate.create({
         ID: DomainId.create(model.id),
@@ -10,7 +10,7 @@ export const {{pascalCase name}}AggregateFactor = (model: {{pascalCase name}}Mod
     });
 }
 
-export const {{pascalCase name}}ModelFactor = (aggregate: {{pascalCase name}}Aggregate): {{pascalCase name}}Model => {
+export const {{pascalCase name}}ModelFactory = (aggregate: {{pascalCase name}}Aggregate): {{pascalCase name}}Model => {
     return {
         id: aggregate.id.value.toString(),
         key: aggregate.key
@@ -19,10 +19,10 @@ export const {{pascalCase name}}ModelFactor = (aggregate: {{pascalCase name}}Agg
 
 export class {{pascalCase name}}Mapper implements IMapper<{{pascalCase name}}Aggregate, {{pascalCase name}}Model>{
     toDomain(model: {{pascalCase name}}Model){
-      return {{pascalCase name}}AggregateFactor(model).getResult();
+      return {{pascalCase name}}AggregateFactory(model).getResult();
     }
     toPersistence(aggregate: {{pascalCase name}}Aggregate){
-        return {{pascalCase name}}ModelFactor(aggregate);
+        return {{pascalCase name}}ModelFactory(aggregate);
     }
 }
 
